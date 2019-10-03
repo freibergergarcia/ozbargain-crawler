@@ -43,7 +43,7 @@ class Request
         $this->searchOffers = new Search($client, $this->crawler, $this->resultsList);
 
         try {
-            $this->searchOffers->searchBargains('/asd');
+            $this->searchOffers->searchBargains('/');
         } catch (GuzzleException $e) {
             throw new Exception("Something went wrong: " . $e->getMessage());
         }
