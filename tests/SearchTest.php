@@ -19,7 +19,7 @@ class SearchTest extends TestCase
     {
         $this->httpClient = new Client([
             'base_uri' => $this->url,
-            'timeout' => 2.0
+            'timeout' => 4.0
         ]);
 
         $this->crawler = new Crawler();

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Acme;
 
 class Result
@@ -7,16 +9,17 @@ class Result
     /**
      * @var string
      */
-    public $title;
+    private $title;
 
+    /**
+     * Result constructor.
+     * @param string $title
+     */
     public function __construct(string $title)
     {
         $this->title = trim($title);
     }
 
-    /**
-     * @return string
-     */
     public function getTitle(): string
     {
         return $this->title;
