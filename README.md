@@ -22,6 +22,12 @@ To install all dependencies just run
 $ composer update
 ```
 
+You might need to create the /tmp folder to log unit tests
+
+```
+$ sudo mkdir tmp
+```
+
 ### Usage
 
 See an example on index.php or:
@@ -34,23 +40,29 @@ use GuzzleHttp\Client;
 
 $httpClient = new Client([
     'base_uri' => 'https://www.ozbargain.com.au/deals',
-    'timeout' => 2.0
+    'timeout' => 3.0
 ]);
 
-$request = new Request($httpClient, 'OzBargain', 'Nancy Ganz');
+$request = new Request($httpClient, 'OzBargain', 'eBay');
 $request->displayResults();
 ```
 
-## Running the application
+## Running application
 ```
 $ php index.php
 ```
 
 
-## Running the tests
+## Running tests
 
 ```
-$ vendor/bin/phpunit --colors tests/SearchTest.php 
+$ vendor/bin/phpunit
+```
+
+## Running insights
+
+```
+$ vendor/bin/phpinsights
 ```
 
 ## License

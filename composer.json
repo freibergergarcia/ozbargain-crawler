@@ -1,6 +1,8 @@
 {
-    "name": "OZ Bargain Crawler",
+    "name": "oz_bargain_crawler",
+    "description": "PHP Crawler to search Oz Bargain deals front page by search term. Could be used to any other url",
     "type": "project",
+    "license":  "GPL-3.0-or-later",
     "require": {
         "guzzlehttp/guzzle": "^6.3",
         "symfony/dom-crawler": "^4.3",
@@ -25,7 +27,8 @@
     "require-dev": {
         "phpunit/phpunit": "^8",
         "squizlabs/php_codesniffer": "*",
-        "phan/phan": "^2.2"
+        "phan/phan": "^2.2",
+        "nunomaduro/phpinsights": "^1.9"
     },
     "scripts": {
         "test": "vendor/bin/phpunit  tests/SearchTest.php",
