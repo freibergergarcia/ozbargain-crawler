@@ -42,7 +42,7 @@ final class Request implements RequestInterface
         $this->resultsList = new ResultsList($title, $searchTerm);
         $this->searchOffers = new Search($client, $this->crawler, $this->resultsList);
 
-        $this->searchOffers->searchBargains('/');
+        $this->searchOffers->searchUrl('/');
     }
 
     public function displayResults(): void

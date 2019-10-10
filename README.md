@@ -62,8 +62,38 @@ $ vendor/bin/phpunit
 ## Running insights
 
 ```
-$ vendor/bin/phpinsights
+##@##:~/ozbargain-crawler$ vendor/bin/phpinsights
+ 9/9 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓] 100%
+
+[2019-10-10 03:10:32] `/ozbargain-crawler`
+
+                                                                              
+        94.7%                86.1%                95.7%                91.3%  
+                                                                              
+
+        Code               Complexity          Architecture            Style
+
+Score scale: ◼ 1-49 ◼ 50-79 ◼ 80-100
+
+[CODE] 94.7 pts within 150 lines
+
+Comments .......................................................... 55.3 %
+Classes ........................................................... 28.0 %
+Functions .......................................................... 0.0 %
+Globally .......................................................... 16.7 %
+
+[COMPLEXITY] 86.1 pts with average of 1.42 cyclomatic complexity
+
+[ARCHITECTURE] 95.7 pts within 9 files
+
+Classes ........................................................... 55.6 %
+Interfaces ........................................................ 33.3 %
+Globally .......................................................... 11.1 %
+Traits ............................................................. 0.0 %
+
+[MISC] 91.3 pts on coding style and 0 security issues encountered
 ```
+
 
 ## License
 

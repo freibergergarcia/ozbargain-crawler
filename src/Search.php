@@ -39,7 +39,7 @@ final class Search
      * @param string $url
      * @throws GuzzleException
      */
-    public function searchBargains(string $url): void
+    public function searchUrl(string $url): void
     {
         $request = $this->httpClient->request('GET', $url);
         $content = $request->getBody();
