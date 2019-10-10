@@ -1,14 +1,13 @@
 <?php
 
-declare(strict_types=1);
-
 namespace Acme;
 
+use Acme\Contracts\RequestInterface;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Symfony\Component\DomCrawler\Crawler;
 
-class Request
+final class Request implements RequestInterface
 {
     /**
      * @var Crawler
@@ -26,7 +25,7 @@ class Request
     private $searchOffers;
 
     /**
-     * @var
+     * @var ResultsList[]
      */
     private $results;
 
@@ -46,7 +45,7 @@ class Request
         $this->searchOffers->searchBargains('/');
     }
 
-    public function displayResults()
+    public function displayResults(): void
     {
         $this->results = $this->resultsList->getResultsList();
 

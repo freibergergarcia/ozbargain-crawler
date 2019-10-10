@@ -1,10 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace Acme;
 
-class Result
+use Acme\Contracts\ResultInterface;
+
+final class Result implements ResultInterface
 {
     /**
      * @var string

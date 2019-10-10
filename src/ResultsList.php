@@ -1,10 +1,11 @@
 <?php
 
-declare(strict_types=1);
-
 namespace Acme;
 
-class ResultsList
+use Acme\Contracts\ResultInterface;
+use Acme\Contracts\ResultsListInterface;
+
+final class ResultsList implements ResultsListInterface
 {
     /**
      * @var array
@@ -34,9 +35,9 @@ class ResultsList
     }
 
     /**
-     * @param Result $result
+     * @param ResultInterface $result
      */
-    public function addResult(Result $result): void
+    public function addResult(ResultInterface $result)
     {
         $this->results[] = $result;
     }

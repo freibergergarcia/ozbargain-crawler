@@ -1,10 +1,8 @@
 <?php
 
-declare(strict_types=1);
-
 namespace Acme;
 
-class TextHelper
+final class TextHelper
 {
     public static function searchResult(string $textContext, string $search): bool
     {

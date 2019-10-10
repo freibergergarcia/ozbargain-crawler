@@ -1,14 +1,12 @@
 <?php
 
-declare(strict_types=1);
-
 namespace Acme;
 
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\GuzzleException;
 use Symfony\Component\DomCrawler\Crawler;
 
-class Search
+final class Search
 {
     /**
      * @var ClientInterface

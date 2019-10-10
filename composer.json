@@ -1,5 +1,5 @@
 {
-    "name": "oz_bargain_crawler",
+    "name": "freibergergarcia/oz-bargain-crawler",
     "description": "PHP Crawler to search Oz Bargain deals front page by search term. Could be used to any other url",
     "type": "project",
     "license":  "GPL-3.0-or-later",
@@ -28,16 +28,19 @@
         "phpunit/phpunit": "^8",
         "squizlabs/php_codesniffer": "*",
         "phan/phan": "^2.2",
-        "nunomaduro/phpinsights": "^1.9"
+        "nunomaduro/phpinsights": "^1.9",
+        "phploc/phploc": "^5.0"
     },
     "scripts": {
         "test": "vendor/bin/phpunit  tests/SearchTest.php",
         "cs": "vendor/bin/phpcs --standard=PSR12 src/",
         "phan": "vendor/bin/phan --allow-polyfill-parser",
+        "insights": "vendor/bin/phpinsights",
         "check": [
             "@test",
             "@cs",
-            "@phan"
+            "@phan",
+            "@insights"
         ]
     },
     "scripts-descriptions": {
